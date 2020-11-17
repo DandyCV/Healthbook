@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="db6267e2-8ec3-4b53-afec-22428dfb6b87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/free_slot_validator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/free_slot_validator.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/visits/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visits/_form.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,7 @@
       <workItem from="1605249457748" duration="8888000" />
       <workItem from="1605272176680" duration="464000" />
       <workItem from="1605272840769" duration="20951000" />
-      <workItem from="1605435830736" duration="49375000" />
+      <workItem from="1605435830736" duration="53565000" />
     </task>
     <task id="LOCAL-00001" summary="Commit to main">
       <created>1605616391944</created>
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605616391944</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Busy time_slot bug fixed">
+      <created>1605639726291</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605639726291</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +199,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit to main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit to main" />
+    <MESSAGE value="Busy time_slot bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Busy time_slot bug fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="177" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605554574882">
@@ -203,10 +211,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605116839105" />
-    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1605616391466">
+    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1605639725906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605616391466" />
+    <state x="585" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605639725906" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605284795289">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,10 +223,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605106554337" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605616725513">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1605639731601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605616725513" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605639731601" />
     <state x="540" y="174" key="com.intellij.database.dbimport.ImportDialog" timestamp="1605087873024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
