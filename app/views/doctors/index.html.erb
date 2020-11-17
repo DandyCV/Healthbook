@@ -1,37 +1,46 @@
 <% if notice %>
-  <aside id="notice"><%= notice %></aside>
+<aside id="notice"><%= notice %></aside>
 <% end %>
-
 <h1>Doctors</h1>
-
 <table>
-  <tfoot>
+    <tfoot>
     <tr>
-      <td colspan="3">
-        <%= link_to 'New Doctor', new_doctor_path %>
-      </td>
+        <td colspan="3">
+            <%= link_to 'New Doctor', new_doctor_path %>
+        </td>
     </tr>
-   <tfoot>
-  <tbody>
+    </tfoot>
+    <tbody>
     <% @doctors.each do |doctor| %>
-      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-        <td>
-          <h1><%= link_to "#{doctor.name} #{doctor.surname}", doctor %></h1>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td class="image">
+            <%= image_tag(doctor.photo_url, class: 'list_image') %>
         </td>
-        <td>
-          <%= doctor.specialization %>
-        </td>
-<!--        <td class="description"><%#= doctor.phone_number %></td>-->
         <td class="description">
-          <%= doctor.work_hours %>
+            <h1><%= "#{doctor.name} #{doctor.surname}" %></h1>
+            <p>
+                <%= doctor.specialization %>
+            </p>
+            <p>
+            <%= doctor.work_hours %>
+            </p>
+          <p>
+            <%= doctor.phone_number %>
+          </p>
         </td>
         <td class="actions">
-          <ul>
-            <li><%= link_to 'Edit', edit_doctor_path(doctor) %></li>
-            <li><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-          </ul>
+            <ul>
+                <li><%= link_to 'Show', doctor %></li>
+                <li><%= link_to 'Edit', edit_doctor_path(doctor) %></li>
+                <li>
+                    <%= link_to 'Destroy',
+                                doctor,
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %>
+                </li>
+            </ul>
         </td>
-      </tr>
+    </tr>
     <% end %>
-  </tbody>
+    </tbody>
 </table>

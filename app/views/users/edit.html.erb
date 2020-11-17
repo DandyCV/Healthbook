@@ -1,0 +1,50 @@
+<div class="clinic_form">
+
+  <%= form_with(model: @user, local: true) do |form| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <h2>Edit User Details</h2>
+
+    <div class="field">
+      <%= form.label :name, 'Name:' %>
+      <%= form.text_field :name, size: 40 %>
+    </div>
+
+    <div class="field">
+      <%= form.label :surname, 'Surname:' %>
+      <%= form.text_field :surname, size: 40 %>
+    </div>
+
+    <div class="field">
+      <%= form.label :birthday, 'Birthday:' %>
+      <%= form.date_select :birthday, size: 40, default: -18.years.from_now, start_year:Date.today.year,
+                           end_year: Date.today.year - 120 %>
+    </div>
+
+    <div class="field">
+      <%= form.label :phone_number, 'Phone number:' %>
+      <%= form.text_field :phone_number, size: 40 %>
+    </div>
+
+    <div class="field">
+      <%= form.label :is_admin, 'Is admin:' %>
+      <%= form.check_box :is_admin %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

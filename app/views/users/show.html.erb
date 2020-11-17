@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @user.surname %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @user.phone_number %>
+</p>
+
+<p>
+  <strong>Is admin:</strong>
+  <%= @user.is_admin %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+<h1>User's visits</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Doctor</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @visits.each do |visit| %>
+    <tr>
+      <td><%= "#{visit.doctor.name} #{visit.doctor.surname}" %></td>
+      <td><%= visit.start_time %></td>
+      <td><%= visit.end_time %></td>
+      <td><%= link_to 'Show', visit %></td>
+      <td><%= link_to 'Edit', edit_visit_path(visit) %></td>
+      <td><%= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

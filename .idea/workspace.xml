@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db6267e2-8ec3-4b53-afec-22428dfb6b87" name="Default Changelist" comment="" />
+    <list default="true" id="db6267e2-8ec3-4b53-afec-22428dfb6b87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.rubocop_airbnb.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.tool-versions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/free_slot_validator.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/clinic/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/doctors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/doctors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/doctors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/doctors_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/doctor.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/doctor.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/doctors/_doctor.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/_doctor.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/doctors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/doctors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/doctors/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpacker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpacker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20201109152749_create_doctors.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/doctors_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/doctors_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/doctors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/doctors.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/system/doctors_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/doctors_test.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Ruby File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,9 +53,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -26,6 +66,18 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\RubymineProjects\healthbook\test\models" />
+      <recent name="G:\RubymineProjects\healthbook\test\fixtures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\RubymineProjects\healthbook\db\migrate" />
+      <recent name="G:\RubymineProjects\healthbook\app\views\calendar" />
+      <recent name="G:\RubymineProjects\healthbook\app\views" />
+    </key>
   </component>
   <component name="RunManager" selected="Rails.Development: healthbook">
     <configuration name="Development: healthbook" type="RailsRunConfigurationType" factoryName="Rails">
@@ -127,6 +179,13 @@
       <workItem from="1604995039723" duration="917000" />
       <workItem from="1605001720584" duration="129000" />
       <workItem from="1605001862175" duration="917000" />
+      <workItem from="1605016501445" duration="1034000" />
+      <workItem from="1605017664456" duration="10877000" />
+      <workItem from="1605107897924" duration="38482000" />
+      <workItem from="1605249457748" duration="8888000" />
+      <workItem from="1605272176680" duration="464000" />
+      <workItem from="1605272840769" duration="20951000" />
+      <workItem from="1605435830736" duration="37863000" />
     </task>
     <servers />
   </component>
@@ -134,9 +193,37 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1604994762629">
+    <state x="552" y="177" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605554574882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604994762629" />
+    <state x="552" y="177" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605554574882" />
+    <state x="708" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605116839105">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="708" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605116839105" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605284795289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605284795289" />
+    <state x="461" y="151" key="SettingsEditor" timestamp="1605106554337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605106554337" />
+    <state x="540" y="174" key="com.intellij.database.dbimport.ImportDialog" timestamp="1605087873024">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="174" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605087873024" />
+    <state x="803" y="222" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605086655026">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="222" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605086655026" />
+    <state x="666" y="119" width="587" height="801" key="find.popup" timestamp="1605549997154">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="119" width="587" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605549997154" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605085781551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605085781551" />
   </component>
 </project>

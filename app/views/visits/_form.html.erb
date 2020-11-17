@@ -1,0 +1,41 @@
+<%= form_with(model: visit, local: true) do |form| %>
+  <% if visit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(visit.errors.count, "error") %> prohibited this visit from being saved:</h2>
+
+      <ul>
+        <% visit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :doctor_id %>
+    <%= form.select :doctor_id,
+                    Doctor.all.order(:surname).map{ |doc| ["#{doc.name} #{doc.surname}", doc.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.select :user_id,
+                    User.all.order(:surname).map{ |user| ["#{user.name} #{user.surname}", user.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.datetime_select :start_time, default: 1.hours.from_now, minute_step: 5,
+                             start_year:Date.today.year, end_year: Date.today.year + 1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.datetime_select :end_time, default: 1.hours.from_now, minute_step: 5,
+                             start_year:Date.today.year, end_year: Date.today.year + 1 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

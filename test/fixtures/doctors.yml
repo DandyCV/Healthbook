@@ -4,12 +4,14 @@ one:
   name: MyString
   surname: MyString
   specialization: MyString
-  phone_number: 1
+  phone_number: MyString
   work_hours: MyString
+  photo_url: MyString
 
 two:
   name: MyString
   surname: MyString
   specialization: MyString
-  phone_number: 1
+  phone_number: MyString
   work_hours: MyString
+  photo_url: MyString

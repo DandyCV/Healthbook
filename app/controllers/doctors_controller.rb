@@ -10,6 +10,7 @@ class DoctorsController < ApplicationController
   # GET /doctors/1
   # GET /doctors/1.json
   def show
+    @visits = Visit.order(start_time: :desc).where(doctor_id: @doctor)
   end
 
   # GET /doctors/new
@@ -69,6 +70,6 @@ class DoctorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def doctor_params
-      params.require(:doctor).permit(:name, :surname, :specialization, :phone_number, :work_hours)
+      params.require(:doctor).permit(:name, :surname, :specialization, :phone_number, :work_hours, :photo_url)
     end
 end

@@ -1,0 +1,23 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+<h1>Our doctors</h1>
+<ul class="clinic">
+  <% cache @doctors do %>
+    <% @doctors.each do |doctor| %>
+      <% cache doctor do %>
+    <li>
+      <%= image_tag(doctor.photo_url) %>
+      <h2><%= "#{doctor.name} #{doctor.surname}" %></h2>
+      <p>
+        <%= sanitize(doctor.specialization) %>
+      </p>
+      <div class="hours">
+        <%= doctor.work_hours %>
+      </div>
+      <%= link_to 'Record a visit', new_visit_path(doctor_id: doctor.id) %>
+    </li>
+      <% end %>
+  <% end %>
+  <% end %>
+</ul>

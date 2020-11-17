@@ -16,6 +16,7 @@ class DoctorsTest < ApplicationSystemTestCase
 
     fill_in "Name", with: @doctor.name
     fill_in "Phone number", with: @doctor.phone_number
+    fill_in "Photo url", with: @doctor.photo_url
     fill_in "Specialization", with: @doctor.specialization
     fill_in "Surname", with: @doctor.surname
     fill_in "Work hours", with: @doctor.work_hours
@@ -31,6 +32,7 @@ class DoctorsTest < ApplicationSystemTestCase
 
     fill_in "Name", with: @doctor.name
     fill_in "Phone number", with: @doctor.phone_number
+    fill_in "Photo url", with: @doctor.photo_url
     fill_in "Specialization", with: @doctor.specialization
     fill_in "Surname", with: @doctor.surname
     fill_in "Work hours", with: @doctor.work_hours
