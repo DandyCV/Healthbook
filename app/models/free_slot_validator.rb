@@ -3,8 +3,10 @@ class FreeSlotValidator < ActiveModel::Validator
   TIME_STEP = 300
 
   def validate(record)
-    doctor_slots = Visit.where(doctor_id: record.doctor_id, start_time: record.start_time..record.start_time.next_day)
-    user_slots = Visit.where(user_id: record.user_id, start_time: record.start_time..record.start_time.next_day)
+    doctor_slots = Visit.where(doctor_id: record.doctor_id,
+                               start_time: (record.start_time - 1.day)..record.start_time.next_day)
+    user_slots = Visit.where(user_id: record.user_id,
+                             start_time: (record.start_time - 1.day)..record.start_time.next_day)
     all_slots = doctor_slots + user_slots
     all_slots.each do |slot|
       # checking reserved time slots
@@ -12,13 +14,13 @@ class FreeSlotValidator < ActiveModel::Validator
       if (slot_array & ((record.start_time.to_i / TIME_STEP)..(record.end_time.to_i / TIME_STEP)).to_a).length > 1
         if slot.id != record.id
         # looking for intersection current timeslot with others
-        if record.doctor_id == slot.doctor_id
-          record.errors[:base] << 'This time is busy'
-          break
-        else
-          record.errors[:base] << "You have visit to doctor #{slot.doctor.surname} for this time"
-          break
-        end
+          if record.doctor_id == slot.doctor_id
+            record.errors[:base] << 'This time is busy'
+            break
+          else
+            record.errors[:base] << "You have visit to doctor #{slot.doctor.surname} for this time"
+            break
+          end
         end
       end
     end

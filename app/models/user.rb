@@ -1,7 +1,7 @@
 
 class User < ApplicationRecord
   after_destroy :ensure_an_admin_remains
-  has_secure_password
+  # has_secure_password
   validates :email, :password, :name, :surname, :phone_number, :birthday, presence: true
   validates :email, uniqueness: true, format: { with: /\A(.+)@(.+)\z/ ,
                                                 message: 'Looks like not an email address'}
