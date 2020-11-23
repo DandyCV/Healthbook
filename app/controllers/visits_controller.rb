@@ -4,34 +4,49 @@ class VisitsController < ApplicationController
   # GET /visits
   # GET /visits.json
   def index
-    @visits = Visit.all
+    if @current_user.is_admin
+      @visits = Visit.all
+    else
+      @visits = Visit.where(user_id: @current_user).order(start_time: :desc)
+
+    end
   end
 
   # GET /visits/1
   # GET /visits/1.json
   def show
+    unless @current_user.is_admin
+      redirect_to visits_url
+    end
   end
 
   # GET /visits/new
   def new
+    @doctor = Doctor.find_by_id(params[:doctor_id])
+    @doctor_visits = Visit.where(doctor_id: params[:doctor_id], start_time: DateTime.now..DateTime.now.next_year)
     @visit = Visit.new
   end
 
+
   # GET /visits/1/edit
   def edit
+    unless @current_user.is_admin || session[:user_id] == @visit.user_id
+      redirect_to @current_user
+    end
   end
 
   # POST /visits
   # POST /visits.json
   def create
     @visit = Visit.new(visit_params)
+    @visit.user_id = @current_user.id
 
     respond_to do |format|
       if @visit.save
         format.html { redirect_to @visit, notice: 'Visit was successfully created.' }
         format.json { render :show, status: :created, location: @visit }
       else
-        format.html { render :new }
+        format.html { render :new, params: { doctor_id: 3 } }
         format.json { render json: @visit.errors, status: :unprocessable_entity }
       end
     end
@@ -40,24 +55,32 @@ class VisitsController < ApplicationController
   # PATCH/PUT /visits/1
   # PATCH/PUT /visits/1.json
   def update
-    respond_to do |format|
-      if @visit.update(visit_params)
-        format.html { redirect_to @visit, notice: 'Visit was successfully updated.' }
-        format.json { render :show, status: :ok, location: @visit }
-      else
-        format.html { render :edit }
-        format.json { render json: @visit.errors, status: :unprocessable_entity }
+    if @current_user.is_admin || session[:user_id] == @visit.user_id
+      respond_to do |format|
+        if @visit.update(visit_params)
+          format.html { redirect_to @visit, notice: 'Visit was successfully updated.' }
+          format.json { render :show, status: :ok, location: @visit }
+        else
+          format.html { render :edit }
+          format.json { render json: @visit.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to @current_user
     end
   end
 
   # DELETE /visits/1
   # DELETE /visits/1.json
   def destroy
-    @visit.destroy
-    respond_to do |format|
-      format.html { redirect_to visits_url, notice: 'Visit was successfully destroyed.' }
-      format.json { head :no_content }
+    if @current_user.is_admin || session[:user_id] == @visit.user_id
+      @visit.destroy
+      respond_to do |format|
+        format.html { redirect_to visits_url, notice: 'Visit was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to @current_user
     end
   end
 
@@ -69,6 +92,6 @@ class VisitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def visit_params
-      params.require(:visit).permit(:doctor_id, :user_id, :start_time, :end_time)
+      params.require(:visit).permit(:doctor_id, :start_time, :end_time)
     end
 end

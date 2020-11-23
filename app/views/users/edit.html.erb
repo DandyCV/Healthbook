@@ -34,7 +34,7 @@
       <%= form.label :phone_number, 'Phone number:' %>
       <%= form.text_field :phone_number, size: 40 %>
     </div>
-    <% if @current_user.is_admin %>
+    <% if @current_user && @current_user.is_admin? %>
     <div class="field">
       <%= form.label :is_admin, 'Is admin:' %>
       <%= form.check_box :is_admin %>
@@ -42,7 +42,7 @@
     <% end %>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit %> <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>
 </div>

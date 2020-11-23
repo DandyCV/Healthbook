@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Visits</h1>
-
+<h1>Visits:</h1>
+<% if @visits.empty? %>
+  <h4>You don't have visits right now:</h4>
+<% end %>
+<% unless @visits.empty? %>
 <table>
   <thead>
     <tr>
@@ -16,18 +19,20 @@
   <tbody>
     <% @visits.each do |visit| %>
       <tr>
+        <% dt_format = "%d-%m-%Y %H:%M" %>
         <td><%= "#{visit.doctor.name} #{visit.doctor.surname}" %></td>
         <td><%= "#{visit.user.name} #{visit.user.surname}" %></td>
-        <td><%= visit.start_time %></td>
-        <td><%= visit.end_time %></td>
+        <td><%= visit.start_time.strftime(dt_format) %></td>
+        <td><%= visit.end_time.strftime(dt_format) %></td>
+        <% if @current_user.is_admin %>
         <td><%= link_to 'Show', visit %></td>
-        <td><%= link_to 'Edit', edit_visit_path(visit) %></td>
-        <td><%= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <td><%= link_to 'Cancel visit', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<% end %>
 
-<br>
 
 <%= link_to 'New Visit', new_visit_path %>

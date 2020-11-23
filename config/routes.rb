@@ -6,8 +6,7 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
     end
   resources :users
-  resources :visits
-  resources :users, only: [:new, :create]
+  resources :visits, except: [:edit, :update]
   resources :doctors
   root 'clinic#index', as: 'clinic_index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

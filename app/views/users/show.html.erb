@@ -24,17 +24,21 @@
   <strong>Phone number:</strong>
   <%= @user.phone_number %>
 </p>
-
+<% if @current_user.is_admin %>
 <p>
   <strong>Is admin:</strong>
   <%= @user.is_admin %>
 </p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
 
 <h1>User's visits</h1>
-
+<% if @visits.empty? %>
+  <h4>You don't have visits right now:</h4>
+<% end %>
+<% unless @visits.empty? %>
 <table>
   <thead>
   <tr>
@@ -52,9 +56,9 @@
       <td><%= visit.start_time %></td>
       <td><%= visit.end_time %></td>
       <td><%= link_to 'Show', visit %></td>
-      <td><%= link_to 'Edit', edit_visit_path(visit) %></td>
       <td><%= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+<% end %>

@@ -9,13 +9,15 @@
     <li>
       <%= image_tag(doctor.photo_url) %>
       <h2><%= "#{doctor.name} #{doctor.surname}" %></h2>
-      <p>
-        <%= sanitize(doctor.specialization) %>
-      </p>
+      <h3>
+        <%= sanitize(doctor.specialization.capitalize) %>
+      </h3>
       <div class="hours">
         <%= doctor.work_hours %>
       </div>
-      <%= link_to 'Record a visit', new_visit_path(doctor_id: doctor.id) %>
+      <div class="price">
+      <%= button_to 'Make an appointment', new_visit_path, params: {doctor_id: doctor.id}, method: :get %>
+      </div>
     </li>
       <% end %>
   <% end %>

@@ -19,15 +19,16 @@
         <td class="description">
             <h1><%= "#{doctor.name} #{doctor.surname}" %></h1>
             <p>
-                <%= doctor.specialization %>
+                <%= doctor.specialization.capitalize %>
             </p>
             <p>
             <%= doctor.work_hours %>
             </p>
           <p>
-            <%= doctor.phone_number %>
+            <%= "Tel. #{doctor.phone_number}" %>
           </p>
         </td>
+      <% if @current_user.is_admin %>
         <td class="actions">
             <ul>
                 <li><%= link_to 'Show', doctor %></li>
@@ -40,6 +41,7 @@
                 </li>
             </ul>
         </td>
+        <% end %>
     </tr>
     <% end %>
     </tbody>

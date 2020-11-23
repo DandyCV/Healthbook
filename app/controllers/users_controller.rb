@@ -6,13 +6,21 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.order(:name)
+    if @current_user.is_admin
+      @users = User.order(:name)
+    else
+      redirect_to @current_user
+    end
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @visits = Visit.order(start_time: :desc).where(user_id: @user)
+    if @current_user.is_admin || session[:user_id] == @user.id
+      @visits = Visit.order(start_time: :desc).where(user_id: @user)
+    else
+      redirect_to @current_user
+    end
   end
 
   # GET /users/new
@@ -22,6 +30,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    unless @current_user.is_admin || session[:user_id] == @user.id
+      redirect_to @current_user
+    end
   end
 
   # POST /users
@@ -43,24 +54,32 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(update_user_params)
-        format.html { redirect_to users_url, notice: "User #{@user.name} was successfully updated." }
-        format.json { render :show, status: :ok, location: @user }
-      else
-        format.html { render :edit }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+    if @current_user.is_admin || session[:user_id] == @user.id
+      respond_to do |format|
+        if @user.update(update_user_params)
+          format.html { redirect_to users_url, notice: "User #{@user.name} was successfully updated." }
+          format.json { render :show, status: :ok, location: @user }
+        else
+          format.html { render :edit }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to @current_user
     end
   end
 
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
+    if @current_user.is_admin || session[:user_id] == @user.id
+      @user.destroy
+      respond_to do |format|
+        format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to @current_user
     end
   end
 

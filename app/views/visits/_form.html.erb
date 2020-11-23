@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
+  <% if @doctor %>
   <div class="field">
     <%= form.label :doctor_id %>
-    <%= form.select :doctor_id,
-                    Doctor.all.order(:surname).map{ |doc| ["#{doc.name} #{doc.surname}", doc.id] } %>
+    <%= form.select :doctor_id, Doctor.all.order(:surname).map{ |doc| ["#{doc.surname} #{doc.name}", doc.id]},
+        selected: (doctor.id if doctor) %>
   </div>
+  <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.select :user_id,
-                    User.all.order(:surname).map{ |user| ["#{user.name} #{user.surname}", user.id] } %>
-  </div>
+  <% unless @doctor %>
+    <div class="field">
+      <%= form.label :doctor_id %>
+      <%= form.select :doctor_id, Doctor.all.order(:surname).map{ |doc| ["#{doc.surname} #{doc.name}", doc.id]}%>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :start_time %>

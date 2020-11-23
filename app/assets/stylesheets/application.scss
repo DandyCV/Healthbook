@@ -34,32 +34,33 @@ header.main {
     display: flex;
     display: -webkit-flex;
     flex-direction: column; // mobile is horizontally laid out
--webkit-box-orient: vertical;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-@media (min-width: 30em) {
-    flex-direction: row; // desktop is vertically laid out
-                            -webkit-box-orient: horizontal;
-}
-nav {
+    @media (min-width: 30em) {
+      flex-direction: row; // desktop is vertically laid out
+      -webkit-box-orient: horizontal;
+    }
+  nav {
     padding-bottom: 1em;
     background: #298673;
     text-align: center; // mobile has centered nav
-@media (min-width: 30em) {
+  @media (min-width: 30em) {
     text-align: left; // desktop nav is left-aligned
                          padding: 1em; // and needs more padding
-}
+    }
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
         @media (min-width: 30em) {
             padding-right: 1em; // give desktop some extra space
-}
+    }
         li {
             margin: 0;
             padding: 0.5em;
             text-transform: uppercase;
             letter-spacing: 0.354em;
+
             a {
                 color: #ffffff;
                 text-decoration: none;
@@ -93,5 +94,12 @@ nav.logged_in_nav {
   }
   input[type="submit"]:hover {
     color: white;
+  }
+}
+.content {
+  nav {
+    ul {
+      list-style: none;
+    }
   }
 }
