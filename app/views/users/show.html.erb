@@ -31,8 +31,8 @@
 </p>
 <% end %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', users_path, class: 'btn btn-light btn-sm' %>
 
 <h1>User's visits</h1>
 <% if @visits.empty? %>
@@ -55,8 +55,9 @@
       <td><%= "#{visit.doctor.name} #{visit.doctor.surname}" %></td>
       <td><%= visit.start_time %></td>
       <td><%= visit.end_time %></td>
-      <td><%= link_to 'Show', visit %></td>
-      <td><%= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', visit, lass: 'btn btn-info btn-sm' %></td>
+      <td><%= link_to 'Destroy', visit, method: :delete, data: { confirm: 'Are you sure?' },
+                      class: 'btn btn-destroy btn-sm' %></td>
     </tr>
   <% end %>
   </tbody>

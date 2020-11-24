@@ -2,17 +2,17 @@
 <aside id="notice"><%= notice %></aside>
 <% end %>
 <h1>Doctors</h1>
-<table>
+<table class="table">
     <tfoot>
     <tr>
         <td colspan="3">
-            <%= link_to 'New Doctor', new_doctor_path %>
+            <%= link_to 'New Doctor', new_doctor_path, class: 'btn btn-success btn-sm' %>
         </td>
     </tr>
     </tfoot>
     <tbody>
     <% @doctors.each do |doctor| %>
-    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <tr>
         <td class="image">
             <%= image_tag(doctor.photo_url, class: 'list_image') %>
         </td>
@@ -31,13 +31,14 @@
       <% if @current_user.is_admin %>
         <td class="actions">
             <ul>
-                <li><%= link_to 'Show', doctor %></li>
-                <li><%= link_to 'Edit', edit_doctor_path(doctor) %></li>
+                <li><%= link_to 'Show', doctor, class: 'btn btn-info btn-sm' %></li>
+                <li><%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-warning btn-sm' %></li>
                 <li>
-                    <%= link_to 'Destroy',
+                    <%= link_to 'Delete',
                                 doctor,
                                 method: :delete,
-                                data: { confirm: 'Are you sure?' } %>
+                                data: { confirm: 'Are you sure?' },
+                                class: 'btn btn-danger btn-sm'%>
                 </li>
             </ul>
         </td>

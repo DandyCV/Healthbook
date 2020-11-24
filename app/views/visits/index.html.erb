@@ -5,7 +5,7 @@
   <h4>You don't have visits right now:</h4>
 <% end %>
 <% unless @visits.empty? %>
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Doctor</th>
@@ -25,9 +25,10 @@
         <td><%= visit.start_time.strftime(dt_format) %></td>
         <td><%= visit.end_time.strftime(dt_format) %></td>
         <% if @current_user.is_admin %>
-        <td><%= link_to 'Show', visit %></td>
+        <td><%= link_to 'Show', visit, class: 'btn btn-info btn-sm' %></td>
         <% end %>
-        <td><%= link_to 'Cancel visit', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Cancel', visit, method: :delete, data: { confirm: 'Are you sure?' },
+                        class: 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,4 +36,4 @@
 <% end %>
 
 
-<%= link_to 'New Visit', new_visit_path %>
+<%= link_to 'New Visit', new_visit_path, class: 'btn btn-success btn-sm' %>

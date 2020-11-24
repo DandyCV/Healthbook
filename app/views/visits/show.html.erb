@@ -20,5 +20,6 @@
   <%= @visit.end_time %>
 </p>
 
-<%= link_to 'Back', visits_path %> |
-<%= link_to 'Destroy', @visit, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', visits_path, class: 'btn btn-light btn-sm' %> |
+<%= link_to 'Destroy', @visit, method: :delete, data: { confirm: 'Are you sure?' },
+            class: 'btn btn-danger btn-sm' %>
