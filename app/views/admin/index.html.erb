@@ -1,10 +1,10 @@
-<h1>Welcome</h1>
-<p>
-  It's <%= Time.now %>.
+<h1>Welcome administrator</h1>
+<h6>
+  It's <%= Time.now.strftime("%d.%m.%Y") %>.
   We have <%= pluralize(@today_visits.count, "visit") %> for today.
-</p>
+</h6>
 
-<table>
+<table class="table">
   <thead>
   <tr>
     <th>Doctor</th>

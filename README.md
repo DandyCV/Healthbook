@@ -18,6 +18,11 @@ How to run this application:
   ```test
   $ node -v
   ```
+  
+* Install all necessary gems. Open project folder and run:
+  ```test
+  $ bundle install
+  ```
 
 * Config access to your MySQL server in file:
   ```test

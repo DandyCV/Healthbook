@@ -4,6 +4,8 @@
     <list default="true" id="db6267e2-8ec3-4b53-afec-22428dfb6b87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +172,7 @@
       <workItem from="1605249457748" duration="8888000" />
       <workItem from="1605272176680" duration="464000" />
       <workItem from="1605272840769" duration="20951000" />
-      <workItem from="1605435830736" duration="162329000" />
+      <workItem from="1605435830736" duration="168326000" />
     </task>
     <task id="LOCAL-00001" summary="Commit to main">
       <created>1605616391944</created>
@@ -214,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606323994000</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add README.md">
+      <created>1606325876743</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606325876743</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +236,8 @@
     <MESSAGE value="User permissions, slot validation, some css" />
     <MESSAGE value="Default admin user / Bootstrap" />
     <MESSAGE value="Fixing Destroy models functionality / add db user and password to credentials.yml.enc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing Destroy models functionality / add db user and password to credentials.yml.enc" />
+    <MESSAGE value="add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="177" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605554574882">
@@ -238,10 +248,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606147835124" />
-    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1606323993510">
+    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1606325876369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606323993510" />
+    <state x="585" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606325876369" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605284795289">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,10 +260,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605106554337" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606324001324">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606325882029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606324001324" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606325882029" />
     <state x="540" y="174" key="com.intellij.database.dbimport.ImportDialog" timestamp="1605087873024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
