@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
-    end
+  end
   resources :users
   resources :visits, except: [:edit, :update]
   resources :doctors

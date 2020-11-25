@@ -2,29 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db6267e2-8ec3-4b53-afec-22428dfb6b87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/javascript/stylesheets/application.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/visits.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/visits.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/doctors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/doctors_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/visits_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/visits_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/doctor.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/doctor.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/free_slot_validator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/free_slot_validator.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/visit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/visit.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/clinic/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/clinic/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/doctors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/doctors/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/doctors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/doctors/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/doctors/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/visits/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visits/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/visits/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visits/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/visits/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visits/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/visits/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visits/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/credentials.yml.enc" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials.yml.enc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Ruby File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -191,7 +194,7 @@
       <workItem from="1605249457748" duration="8888000" />
       <workItem from="1605272176680" duration="464000" />
       <workItem from="1605272840769" duration="20951000" />
-      <workItem from="1605435830736" duration="129702000" />
+      <workItem from="1605435830736" duration="160519000" />
     </task>
     <task id="LOCAL-00001" summary="Commit to main">
       <created>1605616391944</created>
@@ -221,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606136273118</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Default admin user / Bootstrap">
+      <created>1606225651724</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606225651724</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +242,8 @@
     <MESSAGE value="Busy time_slot bug fixed" />
     <MESSAGE value="User create/update" />
     <MESSAGE value="User permissions, slot validation, some css" />
-    <option name="LAST_COMMIT_MESSAGE" value="User permissions, slot validation, some css" />
+    <MESSAGE value="Default admin user / Bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default admin user / Bootstrap" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="177" width="1092" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605554574882">
@@ -243,10 +254,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606147835124" />
-    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1606136272624">
+    <state x="585" y="87" key="CommitChangelistDialog2" timestamp="1606225651099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606136272624" />
+    <state x="585" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606225651099" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1605284795289">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -255,10 +266,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605106554337" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606136282255">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606225656973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606136282255" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606225656973" />
     <state x="540" y="174" key="com.intellij.database.dbimport.ImportDialog" timestamp="1605087873024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

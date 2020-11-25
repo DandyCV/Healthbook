@@ -11,13 +11,13 @@ class Doctor < ApplicationRecord
   }
 
   has_many :visits
-  before_destroy :ensure_not_referenced_by_any_visit
+  before_destroy :ensure_no_visits_for_doctor
 
   private
-  # ensure that there are no visits referencing this doctor
-  def ensure_not_referenced_by_any_visit
+
+  def ensure_no_visits_for_doctor
     unless visits.empty?
-      errors.add(:base, 'Visits present')
+      errors.add(:base, 'Doctor has visits')
       throw :abort
     end
   end

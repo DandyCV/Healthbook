@@ -29,11 +29,11 @@ class VisitsController < ApplicationController
 
 
   # GET /visits/1/edit
-  def edit
-    unless @current_user.is_admin || session[:user_id] == @visit.user_id
-      redirect_to @current_user
-    end
-  end
+  # def edit
+  #   unless @current_user.is_admin || session[:user_id] == @visit.user_id
+  #     redirect_to @current_user
+  #   end
+  # end
 
   # POST /visits
   # POST /visits.json
@@ -54,33 +54,38 @@ class VisitsController < ApplicationController
 
   # PATCH/PUT /visits/1
   # PATCH/PUT /visits/1.json
-  def update
-    if @current_user.is_admin || session[:user_id] == @visit.user_id
-      respond_to do |format|
-        if @visit.update(visit_params)
-          format.html { redirect_to @visit, notice: 'Visit was successfully updated.' }
-          format.json { render :show, status: :ok, location: @visit }
-        else
-          format.html { render :edit }
-          format.json { render json: @visit.errors, status: :unprocessable_entity }
-        end
-      end
-    else
-      redirect_to @current_user
-    end
-  end
+  # def update
+  #   if @current_user.is_admin || session[:user_id] == @visit.user_id
+  #     respond_to do |format|
+  #       if @visit.update(visit_params)
+  #         format.html { redirect_to @visit, notice: 'Visit was successfully updated.' }
+  #         format.json { render :show, status: :ok, location: @visit }
+  #       else
+  #         format.html { render :edit }
+  #         format.json { render json: @visit.errors, status: :unprocessable_entity }
+  #       end
+  #     end
+  #   else
+  #     redirect_to @current_user
+  #   end
+  # end
 
   # DELETE /visits/1
   # DELETE /visits/1.json
   def destroy
     if @current_user.is_admin || session[:user_id] == @visit.user_id
-      @visit.destroy
-      respond_to do |format|
-        format.html { redirect_to visits_url, notice: 'Visit was successfully destroyed.' }
-        format.json { head :no_content }
+      if @visit.destroy
+        respond_to do |format|
+          format.html { redirect_to visits_url, notice: 'Visit was successfully canceled.' }
+          format.json { head :no_content }
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to visits_path, alert: "Visit can't be canceled. #{@visit.errors[:base][-1]}"}
+        end
       end
     else
-      redirect_to @current_user
+      redirect_to visits_url
     end
   end
 

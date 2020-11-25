@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   skip_before_action :authorize
   def new
+    if @current_user
+      redirect_to clinic_index_url
+    end
   end
 
   def create

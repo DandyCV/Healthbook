@@ -76,10 +76,15 @@ class DoctorsController < ApplicationController
   # DELETE /doctors/1.json
   def destroy
     if @current_user.is_admin
-      @doctor.destroy
-      respond_to do |format|
-        format.html { redirect_to doctors_url, notice: 'Doctor was successfully destroyed.' }
-        format.json { head :no_content }
+      if @doctor.destroy
+        respond_to do |format|
+          format.html { redirect_to doctors_url, notice: 'Doctor was successfully deleted.' }
+          format.json { head :no_content }
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to doctors_path, alert: "Doctor can't be deleted. #{@doctor.errors[:base][-1]}"}
+        end
       end
     else
       redirect_to doctors_url

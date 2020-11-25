@@ -15,8 +15,8 @@ doctors = Doctor.create([{name: 'Serhii', surname: 'Velychko', specialization: '
                               'https://clipart-db.ru/file_content/rastr/doctor-003.png'
                          }])
 
-users = User.create([{email: 'admin@gmail.com', password: 'admin', name: 'Admin', surname: 'Admin',
-                      birthday: '1991-01-01', phone_number: '380997775503', is_admin: true},
+users = User.create([{email: 'admin@admin', password: 'admin', name: 'Admin', surname: 'Admin',
+                      birthday: '1991-01-01', phone_number: '000000000000', is_admin: true},
                      {email: 'user1@gmail.com', password: '123456', name: 'Tomy', surname: 'Anjelo',
                       birthday: '1939-07-10', phone_number: '380996775503'},
                      {email: 'user2@gmail.com', password: '123456', name: 'Jimm', surname: 'Klarck',
