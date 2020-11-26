@@ -13,6 +13,9 @@
   <body>
     <header class="main">
       <%= image_tag 'logo.png', alt: 'Health Book' %>
+      <% if @current_user && @current_user.is_admin %>
+        <h6 style="text-align: right; color: blue; margin-right: 1em">You logged in as admin!</h6>
+      <% end %>
       <h1><%= @page_title %></h1>
     </header>
     <section class="content">

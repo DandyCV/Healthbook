@@ -2,24 +2,24 @@
 
 <p>
   <strong>Doctor:</strong>
-  <%= @visit.doctor_id %>
+  <%= @visit.doctor.name %> <%= @visit.doctor.surname %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @visit.user_id %>
+  <%= @visit.user.name %> <%= @visit.user.surname %>
 </p>
 
 <p>
   <strong>Start time:</strong>
-  <%= @visit.start_time %>
+  <%= @visit.start_time.strftime("%d.%m.%Y %H:%M") %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @visit.end_time %>
+  <%= @visit.end_time.strftime("%d.%m.%Y %H:%M") %>
 </p>
 
-<%= link_to 'Back', visits_path, class: 'btn btn-light btn-sm' %> |
+<%= link_to 'Back', visits_path, class: 'btn btn-outline-secondary btn-sm' %> |
 <%= link_to 'Destroy', @visit, method: :delete, data: { confirm: 'Are you sure?' },
-            class: 'btn btn-danger btn-sm' %>
+            class: 'btn btn-outline-danger btn-sm' %>

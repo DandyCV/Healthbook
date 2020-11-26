@@ -2,7 +2,6 @@ class User < ApplicationRecord
   before_destroy :ensure_an_admin_remains, :ensure_no_visits_for_user
   before_save {self.email = email.downcase}
   has_secure_password
-  validates :password, length: { minimum: 4 }
   validates :email, presence: true
   validates :email, uniqueness: true, format: { with: /\A(.+)@(.+)\z/ ,
                                                 message: 'Looks like not an email address'}

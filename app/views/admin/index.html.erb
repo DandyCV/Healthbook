@@ -20,10 +20,11 @@
     <tr>
       <td><%= "#{visit.doctor.name} #{visit.doctor.surname}" %></td>
       <td><%= "#{visit.user.name} #{visit.user.surname}" %></td>
-      <td><%= visit.start_time %></td>
-      <td><%= visit.end_time %></td>
-      <td><%= link_to 'Show', visit %></td>
-      <td><%= link_to 'Cancel', visit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= visit.start_time.strftime("%H:%M") %></td>
+      <td><%= visit.end_time.strftime("%H:%M") %></td>
+      <td><%= link_to 'Show', visit, class: 'btn btn-outline-primary btn-sm' %></td>
+      <td><%= link_to 'Cancel', visit, method: :delete, data: { confirm: 'Are you sure?' },
+                      class: 'btn btn-outline-danger btn-sm'%></td>
     </tr>
   <% end %>
   </tbody>

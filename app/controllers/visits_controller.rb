@@ -5,7 +5,7 @@ class VisitsController < ApplicationController
   # GET /visits.json
   def index
     if @current_user.is_admin
-      @visits = Visit.all
+      @visits = Visit.order(start_time: :desc)
     else
       @visits = Visit.where(user_id: @current_user).order(start_time: :desc)
 

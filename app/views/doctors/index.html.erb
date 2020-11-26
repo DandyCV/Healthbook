@@ -7,7 +7,7 @@
     <tfoot>
     <tr>
         <td colspan="3">
-            <%= link_to 'New Doctor', new_doctor_path, class: 'btn btn-success btn-sm' %>
+            <%= link_to 'New Doctor', new_doctor_path, class: 'btn btn-outline-success btn-sm' %>
         </td>
     </tr>
     </tfoot>
@@ -33,14 +33,14 @@
       <% if @current_user.is_admin %>
         <td class="actions">
             <ul>
-                <li><%= link_to 'Show', doctor, class: 'btn btn-info btn-sm' %></li>
-                <li><%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-warning btn-sm' %></li>
+                <li><%= link_to 'Show', doctor, class: 'btn btn-outline-primary btn-sm' %></li>
+                <li><%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-outline-warning btn-sm' %></li>
                 <li>
                     <%= link_to 'Delete',
                                 doctor,
                                 method: :delete,
                                 data: { confirm: 'Are you sure?' },
-                                class: 'btn btn-danger btn-sm'%>
+                                class: 'btn btn-outline-danger btn-sm'%>
                 </li>
             </ul>
         </td>

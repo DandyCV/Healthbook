@@ -1,17 +1,17 @@
+<h1>New Visit</h1>
+
+<%= render 'form', visit: @visit, doctor: @doctor %>
+
+<%= link_to 'Back', visits_path, class: 'btn btn-outline-secondary btn-sm'%>
+
 <% if @doctor %>
-<h1>Doctor <%= @doctor.surname %> visits:</h1>
-<% if @doctor_visits.empty? %>
-  <h3>Doctor <%= @doctor.surname %> doesn't have visits yet.</h3>
-<% end %>
+  <h1>Doctor <%= @doctor.surname %> visits:</h1>
+  <% if @doctor_visits.empty? %>
+    <h3>Doctor <%= @doctor.surname %> doesn't have visits yet.</h3>
+  <% end %>
   <% @doctor_visits.each do |visit| %>
     <tr>
       <td><h4><%= visit.start_time.strftime("%d.%m.%y %H:%M") %> - <%=visit.end_time.strftime("%H:%M") %></h4></td>
     </tr>
   <% end %>
-  <% end %>
-
-<h1>New Visit</h1>
-
-<%= render 'form', visit: @visit, doctor: @doctor %>
-
-<%= link_to 'Back', visits_path, class: 'btn btn-light btn-sm'%>
+<% end %>
