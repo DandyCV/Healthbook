@@ -46,9 +46,6 @@ jobs:
 
       environment:
         - CIRCLE_CI: true
-        - RAILS_ENV: test
-        - DB_USERNAME: root
-        - DB_PASSWORD: ''
 
       steps:
         - checkout
