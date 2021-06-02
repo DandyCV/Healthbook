@@ -1,15 +1,74 @@
-version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
+defaults: &defaults
+  working_directory: ~/healthbook
+  docker:
+    - image: circleci/ruby:2.6.6-node
+      environment:
+        RAILS_ENV: test
+        DB_HOST: 127.0.0.1
+        DB_USERNAME: root
+        DB_PASSWORD: ''
+
+    - image: circleci/mysql:8.0.4
+      command: [--default-authentication-plugin=mysql_native_password]
+      environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+        MYSQL_ROOT_HOST: '%'
+
+references:
+  install_bundler: &install_bundler
+    run:
+      name: Installing bundler
+      command: |
+            gem i bundler -v $(tail -1 Gemfile.lock | tr -d ' ')
+            bundle config set path 'vendor/bundle'
+
+  restore_bundle_cache: &restore_bundle_cache
+    restore_cache:
+      keys:
+        - healthbook-{{ checksum "Gemfile.lock" }}
+
+  bundle_install: &bundle_install
+    run:
+      name: Installing gems
+      command: bundle install
+
+  save_bundle_cache: &save_bundle_cache
+    save_cache:
+      key: healthbook-{{ checksum "Gemfile.lock" }}
+      paths:
+        - vendor/bundle
+
+version: 2
 
 jobs:
+  tests:
+      <<: *defaults
+
+      environment:
+        - CIRCLE_CI: true
+
+      steps:
+        - checkout
+
+        - <<: *install_bundler
+        - <<: *restore_bundle_cache
+        - <<: *bundle_install
+        - <<: *save_bundle_cache
+
+        - run:
+            name: Preparing database config
+            command: cp config/database.yml.ci config/database.yml
+
+        - run:
+            name: Creating database
+            command: bundle exec rails db:create
+
+        - run:
+            name: Loading schema
+            command: bundle exec rails db:schema:load
+
+workflows:
+  version: 2
   build:
-    docker:
-      - image: circleci/ruby:2.6.3-stretch-node
-    executor: ruby/default
-    steps:
-      - checkout
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+    jobs:
+      - tests
